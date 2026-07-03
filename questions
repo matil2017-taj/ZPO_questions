@@ -1,1 +1,29 @@
+Restauracja (Zarządzanie stolikami) 
 
+Baza danych: Stolik (liczba miejsc, lokalizacja wewnątrz/ogródek), Rezerwacja (godzina, liczba gości). 
+
+Webowe UI: Formularz wyszukiwania stolika na konkretną godzinę dla X osób. 
+
+Algorytm: Dobór optymalnego stolika. Jeśli przychodzi 3 gości, system szuka najpierw wolnego stolika 3- lub 4-osobowego, zamiast blokować stolik 8-osobowy. 
+
+REST + Swagger: Endpoint GET zwracający pierwszy pasujący stolik spełniający warunki (liczba osób + czas). 
+
+Security: Gość musi założyć konto, by zarezerwować. Kelner ma uprawnienia do podglądu całego dnia. 
+
+Test: Testy do algorytmu optymalnego dopasowania stolika do liczby gości. 
+
+ 
+
+Aplikacja dietetyczna (Zapotrzebowanie kaloryczne) 
+
+Baza danych: Posiłek (nazwa, makroskładniki, kalorie), Dziennik (data, spożyte posiłki). 
+
+Webowe UI: Widok dodawania posiłku do dnia i podgląd na wykres/pasek postępu kalorii. 
+
+Algorytm: Wyliczanie dziennego zapotrzebowania kalorycznego (BMR) na podstawie wagi, wzrostu, wieku, płci oraz weryfikacja, ile % dziennego zapotrzebowania stanowią wpisane posiłki. 
+
+REST + Swagger: Endpoint GET pobierający podsumowanie makroskładników dla danego dnia. 
+
+Security: Użytkownik widzi wyłącznie swój dziennik posiłków i ustawienia wagi. 
+
+Test: Testy jednostkowe kalkulatora równania Harrisa-Benedicta (BMR) i sumowania makroskładników. 
